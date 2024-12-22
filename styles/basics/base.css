@@ -5,3 +5,6 @@
 body{
     background-color: #22252c;;
 }
+canvas{
+    border: #c71e0f 1px solid;
+}

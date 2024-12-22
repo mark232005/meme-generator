@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Ultimate Meme Generator</title>
     <link rel="stylesheet" href="styles/setup/style.css">
 </head>
-<body>
+
+<body onload="onInit()">
     <header class="main-header">
         <div class="log"></div>
         <div class="nav-var">
@@ -20,11 +22,22 @@
     </header>
     <main class="main-contant">
         <section class="section-gallery ">
-            
         </section>
-        <section class="section-editor">
-
+        <section class="editor">
+            <div class="canvas-container">
+                <canvas width="450" height="450">
+                </canvas>
+            </div>
+            <div class="canvas-editor">
+                <label for="text">Text:</label>
+                <input type="text" id="text" placeholder="text" oninput="onInputText()" />
+            </div>
         </section>
     </main>
+    <script src="js/servise/memeServise.js"></script>
+
+    <script src="js/controller/memeController.js"></script>
+    <script src="js/controller/galleryController.js"></script>
 </body>
+
 </html>
