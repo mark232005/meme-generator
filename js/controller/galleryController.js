@@ -13,10 +13,6 @@ function onImgSelect(id){
     renderMeme()
     showSection('.editor')
  }
- 
-function get() {
 
-}
-
-
+  
 

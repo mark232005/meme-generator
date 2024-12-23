@@ -30,11 +30,18 @@
             </div>
             <div class="canvas-editor">
                 <label for="text">Text:</label>
-                <input type="text" id="text" placeholder="text" oninput="onInputText()" />
+                <input type="text" id="text" placeholder="text" oninput="onSetLineTxt()" />
+                <label for="color"></label>
+                <input type="color" id="color" oninput="onSetLineColor()">
+                <button onclick="onDownload()">Download</button>
+                <button onclick="onChangeSize('-')">-</button>
+                <button onclick="onChangeSize('+')">+</button>
+                <button onclick="onAddLine()">Add line</button>
+                <button onclick="onSwitchLine()">switch line</button>
             </div>
         </section>
     </main>
-    <script src="js/servise/memeServise.js"></script>
+    <script src="js/service/memeService.js"></script>
 
     <script src="js/controller/memeController.js"></script>
     <script src="js/controller/galleryController.js"></script>
