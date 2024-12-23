@@ -27,7 +27,10 @@ var gMeme = {
         {
             txt: ' Add text',
             size: 40,
-            color: 'black'
+            color: 'black',
+            pos:  { x: 0, y: 0 },
+            isDrag: false
+
         }
     ]
 }
@@ -56,10 +59,10 @@ function drawText(text, x, y,id) {
     gCtx.fillText(text, x, y)
     gCtx.strokeText(text, x, y)
     if(gMeme.selectedLineId===id){
-        const textWidth = gCtx.measureText(text).width;
+        const textWidth = gCtx.measureText(text).width
         const textHeight = gMeme.lines[gMeme.selectedLineId].size   
         gCtx.strokeRect(x - textWidth / 2 - 10, y - textHeight / 2 - 10, textWidth + 20, textHeight + 20)
-    
+        gMeme.lines[gMeme.selectedLineId].pos = { x, y }    
     }
     
 }
@@ -109,6 +112,7 @@ function showSection(sectionToShow) {
     gMeme.lines.push(
         { txt: ' Add text',
             size: 40,
+            pos: { x: gElCanvas.width / 2, y: 50 + gMeme.lines.length * 60 },
             color: 'black'}
     )
     gMeme.selectedLineId++
@@ -125,8 +129,30 @@ function showSection(sectionToShow) {
         currLine=0
     }
     gMeme.selectedLineId=currLine
-    // const textWidth = gCtx.measureText(text).width;
-    // const textHeight = gMeme.lines[gMeme.selectedLineId].size   
-    // gCtx.strokeRect(x - textWidth / 2 - 10, y - textHeight / 2 - 10, textWidth + 20, textHeight + 20)
-
    }
+
+function isLineClicked(clickedPos) {
+    const line = gMeme.lines[gMeme.selectedLineId]
+    
+    if (!line || !line.pos) return false
+    
+    const { x, y } = line.pos
+    const textWidth = gCtx.measureText(line.txt).width
+    const textHeight = line.size
+
+    if (
+        clickedPos.x > x - textWidth / 2 - 10 &&
+        clickedPos.x < x + textWidth / 2 + 10 &&
+        clickedPos.y > y - textHeight / 2 - 10 &&
+        clickedPos.y < y + textHeight / 2 + 10
+    ) {
+        return true
+    }
+    return false
+}
+
+  
+  function setLineDrag(isDrag) {
+    gMeme.lines[gMeme.selectedLineId].isDrag = isDrag
+  }
+  
