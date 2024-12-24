@@ -106,7 +106,12 @@ function addMouseListeners() {
     gStartPos = pos
     document.body.style.cursor = 'grabbing'
   
-  }
+    if (lineClicked) {
+        const elTextInput = document.getElementById('text');
+        elTextInput.value = gMeme.lines[gMeme.selectedLineId].txt; 
+        renderMeme()
+    }
+}
 
 function onMove(ev) {
     if (!gMeme.lines[gMeme.selectedLineId].isDrag) return

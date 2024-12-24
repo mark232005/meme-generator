@@ -28,7 +28,7 @@ var gMeme = {
             txt: ' Add text',
             size: 40,
             color: 'black',
-            pos:  { x: 0, y: 0 },
+            pos:  { x: 250, y: 150 },
             isDrag: false
 
         }
@@ -132,23 +132,25 @@ function showSection(sectionToShow) {
    }
 
 function isLineClicked(clickedPos) {
-    const line = gMeme.lines[gMeme.selectedLineId]
-    
-    if (!line || !line.pos) return false
-    
-    const { x, y } = line.pos
-    const textWidth = gCtx.measureText(line.txt).width
-    const textHeight = line.size
+    for (let i = 0; i < gMeme.lines.length; i++) {
+        const line = gMeme.lines[i]
+        
+        if (!line || !line.pos) continue 
+        const { x, y } = line.pos
+        const textWidth = gCtx.measureText(line.txt).width
+        const textHeight = line.size
 
-    if (
-        clickedPos.x > x - textWidth / 2 - 10 &&
-        clickedPos.x < x + textWidth / 2 + 10 &&
-        clickedPos.y > y - textHeight / 2 - 10 &&
-        clickedPos.y < y + textHeight / 2 + 10
-    ) {
-        return true
+        if (
+            clickedPos.x > x - textWidth / 2 - 20 &&
+            clickedPos.x < x + textWidth / 2 + 20 &&
+            clickedPos.y > y - textHeight / 2 - 20 &&
+            clickedPos.y < y + textHeight / 2 + 20
+        ) {
+            gMeme.selectedLineId = i 
+            return true
+        }
     }
-    return false
+    return false  
 }
 
   
