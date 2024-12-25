@@ -4,24 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Ultimate Meme Generator</title>
+    <title>Meme Generator</title>
     <link rel="stylesheet" href="/styles/setup/style.css">
 </head>
 
-<body onload="onInit()">
-    <header class="main-header">
-        <div class="log"></div>
-        <div class="nav-var">
-            <ul>
-                <li><button>Gallery</button></li>
-                <li><button>Saved</button></li>
-                <li><button>Randomize</button></li>
+<body onload="onInit()" class="main-body grid">
+    <header class="main-header flex ">
+        <div class="log">Meme Meme Generator</div>
+        <div class="nav-var flex">
+            <ul class="clean-list flex">
+                <li class="flex"><button>Gallery</button></li>
+                <li class="flex"><button>Saved</button></li>
+                <li class="flex"><button>Randomize</button></li>
             </ul>
 
         </div>
     </header>
-    <main class="main-contant">
-        <section class="section-gallery ">
+    <main class="main-contant ">
+        <section class="section-gallery grid">
+            <img src="img/1.jpg" alt="img/errorImg" onclick="onImgSelect(1)">
+            <img src="img/2.jpg" alt="img/errorImg" onclick="onImgSelect(2)">
+            <img src="img/3.jpg" alt="img/errorImg" onclick="onImgSelect(3)">
+            <img src="img/4.jpg" alt="img/errorImg" onclick="onImgSelect(4)">
+            <img src="img/5.jpg" alt="img/errorImg" onclick="onImgSelect(5)">
+            <img src="img/6.jpg" alt="img/errorImg" onclick="onImgSelect(6)">
+            <img src="img/7.jpg" alt="img/errorImg" onclick="onImgSelect(7)">
+            <img src="img/8.jpg" alt="img/errorImg" onclick="onImgSelect(8)">
+            <img src="img/9.jpg" alt="img/errorImg" onclick="onImgSelect(9)">
+            <img src="img/10.jpg" alt="img/errorImg" onclick="onImgSelect(10)">
+            <img src="img/11.jpg" alt="img/errorImg" onclick="onImgSelect(11)">
+            <img src="img/12.jpg" alt="img/errorImg" onclick="onImgSelect(12)">
+            <img src="img/13.jpg" alt="img/errorImg" onclick="onImgSelect(13)">
+            <img src="img/14.jpg" alt="img/errorImg" onclick="onImgSelect(14)">
+            <img src="img/15.jpg" alt="img/errorImg" onclick="onImgSelect(15)">
+            <img src="img/16.jpg" alt="img/errorImg" onclick="onImgSelect(16)">
+            <img src="img/17.jpg" alt="img/errorImg" onclick="onImgSelect(17)">
+            <img src="img/18.jpg" alt="img/errorImg" onclick="onImgSelect(18)">
         </section>
         <section class="editor">
             <div class="canvas-container">
@@ -38,6 +56,15 @@
                 <button onclick="onChangeSize('+')">+</button>
                 <button onclick="onAddLine()">Add line</button>
                 <button onclick="onSwitchLine()">switch line</button>
+                <label for="font-family"></label>
+                <select id="font-family" name="font-family" class="font-family" onchange="onSetFont()">
+                    <option value="arial">Arial</option>
+                    <option value="times New Roman ">Times New Roman</option>
+                    <option value="verdana">Verdana</option>
+                    <option value="georgia">Georgia</option>
+                </select>
+                <button onclick="onDeleteLine()">Delete</button>
+    
             </div>
         </section>
     </main>

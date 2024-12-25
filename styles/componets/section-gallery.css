@@ -1,0 +1,18 @@
+
+* {
+    box-sizing: border-box;
+}
+
+.section-gallery {
+    background-color: var(--primary-clr-700);
+    gap: 20px;
+    align-items: center;
+    padding-inline: 50px;
+    overflow: auto;
+    border-radius: 9px;
+    padding-top: 3.5em;
+}
+
+.section-gallery>img {
+    border-radius: 10px;
+}

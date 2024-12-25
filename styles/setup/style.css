@@ -11,6 +11,8 @@
 @import url('/styles/basics/layout.css');
 
 /*COMPONETS*/
+@import url('/styles/componets/main-header.css');
+@import url('/styles/componets/section-gallery.css');
 
 /*MQ*/
 @import url('/styles/setup/mq.css');
