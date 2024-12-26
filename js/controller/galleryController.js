@@ -1,18 +1,18 @@
 'use strict'
-// function renderGallery(){
-//     const memes=getGImgs()
-//     const elGallery=document.querySelector('.section-gallery')
-//     const strHtml= memes
-//     .map(meme => `<img src="${meme.url}" alt="img/errorImg" onclick="onImgSelect(${meme.id})" />`)
-//     .join('')
-//     elGallery.innerHTML=strHtml
-// }
 
-function onImgSelect(id){
+function onImgSelect(id) {
     slectImg(id)
     renderMeme()
     showSection('.editor')
- }
+}
+function onOpenGallery() {
+    showSection('.section-gallery')
+}
+function toggleMenu() {
+    document.querySelector('.nav-var').classList.toggle('menu-open')
+    document.querySelector('.main-screen').classList.toggle('active')
 
-  
+}
+
+
 

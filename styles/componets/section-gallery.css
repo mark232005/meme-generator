@@ -4,6 +4,7 @@
 }
 
 .section-gallery {
+
     background-color: var(--primary-clr-700);
     gap: 20px;
     align-items: center;

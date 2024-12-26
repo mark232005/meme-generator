@@ -1,0 +1,114 @@
+.canvas-editor{
+    background-color: var(--primary-clr-700);
+    border-radius: 20px;
+    padding: 20px;
+}
+.canvas-editor .text{
+    margin: auto;
+    width: 80%;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+    
+
+.btn-line-action{
+    justify-content: center;
+    align-items: center;
+}
+.edit-line{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    background-color: #19a59f;
+    border-radius: 20px;
+}
+.switch-line{
+    grid-area: 1/1/2/2;
+    border-radius:30% ;
+    width: 60px;
+    height: 60px;
+    background-color: #386eab;
+    
+}
+.switch-line img{
+    height: 100%;
+}
+.delete-line{
+    grid-area: 1/1/2/2;
+
+    border-radius:30% ;
+    width: 60px;
+    height: 60px;
+    background-color: #c03718;
+    
+}
+.add-line{
+    grid-area: 1/1/2/2;
+
+    border-radius:30% ;
+    width: 60px;
+    height: 60px;
+    background-color: #4ac018;
+    
+}
+.color-btn{
+    border-radius:30% ;
+    width: 60px;
+    height: 60px;
+    background-color: #e8e8e8;
+    
+}
+.plus-size-txt{
+    grid-area: 1/1/2/2;
+
+    border-radius:30% ;
+    width: 60px;
+    height: 60px;
+    background-color: #e8e8e8;
+}
+.min-size-txt{
+    grid-area: 1/1/2/2;
+
+    border-radius:30% ;
+    width: 60px;
+    height: 60px;
+    background-color: #e8e8e8;
+    
+}
+.font-family{
+    border-radius: 10px;
+    padding: 15px;
+    grid-area: 2/1/3/2;
+ 
+}
+.btn-edit-line{
+    gap: 10px;
+}
+.btn-download{
+    border-radius:30% ;
+    width: 60px;
+    height: 60px;
+    background-color: #6f4cbc;
+
+
+}
+.btn-save{
+    border-radius:30% ;
+    width: 60px;
+    height: 60px;
+    background-color: #386eab;
+
+}
+.btn-save img{
+    height: 60%;
+}
+.btn-download img{
+    height: 60%;
+}
+.btn-img-action{
+   gap: 10px;
+    align-items: center;
+    justify-content: center;
+}

@@ -28,6 +28,7 @@ var gMeme = {
             txt: ' Add text',
             size: 40,
             color: '',
+            colorFrame: '',
             pos: { x: 250, y: 150 },
             isDrag: false,
             font: 'arial'
@@ -52,7 +53,7 @@ function getMeme() {
 }
 function drawText(text, x, y, id) {
     gCtx.lineWidth = 2
-    gCtx.strokeStyle = 'balck'
+    gCtx.strokeStyle = gMeme.lines[gMeme.selectedLineId].colorFrame
     gCtx.fillStyle = gMeme.lines[gMeme.selectedLineId].color
     gCtx.font = ` ${gMeme.lines[gMeme.selectedLineId].size}px ${gMeme.lines[gMeme.selectedLineId].font}`
     gCtx.textAlign = 'center'
@@ -79,6 +80,12 @@ function setLineTxt() {
     const elTextInput = document.getElementById('text')
     const text = elTextInput.value
     gMeme.lines[gMeme.selectedLineId].txt = text
+}
+function setFrameLineColor() {
+    const elFrameColorInput = document.getElementById('frame-color')
+    const frameColor = elFrameColorInput.value
+    gMeme.lines[gMeme.selectedLineId].colorFrame = frameColor
+
 }
 function setLineColor() {
     const elColorInput = document.getElementById('color')
@@ -115,7 +122,8 @@ function createLins() {
             txt: ' Add text',
             size: 40,
             pos: { x: gElCanvas.width / 2, y: 50 + gMeme.lines.length * 60 },
-            color: ''
+            color: '',
+            colorFrame: ''
         }
     )
     gMeme.selectedLineId++

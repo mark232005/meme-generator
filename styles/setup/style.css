@@ -13,6 +13,9 @@
 /*COMPONETS*/
 @import url('/styles/componets/main-header.css');
 @import url('/styles/componets/section-gallery.css');
+@import url('/styles/componets/logo.css');
+@import url('/styles/componets/canvas-editor.css');
+@import url('/styles/componets/main-screen.css');
 
 /*MQ*/
 @import url('/styles/setup/mq.css');

@@ -9,16 +9,17 @@
 </head>
 
 <body onload="onInit()" class="main-body grid">
+    <div onclick="toggleMenu()" class="main-screen"></div>
     <header class="main-header flex ">
-        <div class="log">Meme Meme Generator</div>
-        <div class="nav-var flex">
-            <ul class="clean-list flex">
-                <li class="flex"><button>Gallery</button></li>
+        <div class="logo">Meme Generator</div>
+        <nav class="nav-var flex">
+            <ul class="clean-list flex ">
+                <li class=" btn-gallery flex" onclick="onOpenGallery()"><button>Gallery</button></li>
                 <li class="flex"><button>Saved</button></li>
                 <li class="flex"><button>Randomize</button></li>
             </ul>
-
-        </div>
+        </nav>
+        <button onclick="toggleMenu()" class="hamburger" type="button">☰</button>
     </header>
     <main class="main-contant ">
         <section class="section-gallery grid">
@@ -46,25 +47,41 @@
                 <canvas width="450" height="450">
                 </canvas>
             </div>
-            <div class="canvas-editor">
-                <label for="text">Text:</label>
-                <input type="text" id="text" placeholder="text" oninput="onSetLineTxt()" />
-                <label for="color"></label>
-                <input type="color" id="color" oninput="onSetLineColor()">
-                <button onclick="onDownload()">Download</button>
-                <button onclick="onChangeSize('-')">-</button>
-                <button onclick="onChangeSize('+')">+</button>
-                <button onclick="onAddLine()">Add line</button>
-                <button onclick="onSwitchLine()">switch line</button>
-                <label for="font-family"></label>
-                <select id="font-family" name="font-family" class="font-family" onchange="onSetFont()">
-                    <option value="arial">Arial</option>
-                    <option value="times New Roman ">Times New Roman</option>
-                    <option value="verdana">Verdana</option>
-                    <option value="georgia">Georgia</option>
-                </select>
-                <button onclick="onDeleteLine()">Delete</button>
-    
+            <div class="canvas-editor grid">
+                <input type="text" id="text" class="text" placeholder="text" oninput="onSetLineTxt()" />
+                <div class="btn-line-action flex">
+                    <button class="switch-line" onclick="onSwitchLine()"><img src="icons/up-down-solid.svg"></button>
+                    <button class="add-line" onclick="onAddLine()"><img src="icons/plus-solid.svg"></button>
+                    <button class="delete-line" onclick="onDeleteLine()"><img src="icons/trash-solid.svg"></button>
+                </div>
+
+                <div class="edit-line">
+                    <div class=" btn-edit-line flex">
+
+                        <button class="color-btn color" onclick="openColorPicker('color')"><img
+                                src="icons/fill-drip-solid.svg"></button>
+                        <input type="color" id="color" style="display: none;" oninput="onSetLineColor()">
+                        <button class="color-btn frame-color" onclick="openColorPicker('frame-color')"><img
+                                src="icons/brush-solid.svg"></button>
+                        <input type="color" id="frame-color" style="display: none;" oninput="onSetFrameLineColor()">
+                        <button class="min-size-txt" onclick="onChangeSize('-')"><img
+                                src="icons/text-size-minus.svg"></button>
+                        <button class="plus-size-txt" onclick="onChangeSize('+')"><img
+                                src="icons/text-size-plus.svg"></button>
+                    </div>
+                    <label for="font-family"></label>
+                    <select id="font-family" name="font-family" class="font-family" onchange="onSetFont()">
+                        <option value="arial">Arial</option>
+                        <option value="times New Roman ">Times New Roman</option>
+                        <option value="verdana">Verdana</option>
+                        <option value="georgia">Georgia</option>
+                    </select>
+                </div>
+                <div class="btn-img-action flex">
+                    <button class="btn-download" onclick="onDownload()"> <img src="icons/download.svg">Download</button>
+                    <button class="btn-save" onclick="onSaveIng()"> <img src="icons/save-solid.svg">Save</button>
+                </div>
+
             </div>
         </section>
     </main>

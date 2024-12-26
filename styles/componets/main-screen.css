@@ -1,0 +1,15 @@
+.main-screen {
+    position: fixed;
+    background-color: #4d4a4aa1;
+    inset: 0;
+    cursor: pointer;
+    display: none;
+}
+
+.main-screen.active {
+    display: block; 
+}
+.nav-var.menu-open{
+    display: block;
+}
+

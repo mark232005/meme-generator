@@ -5,7 +5,7 @@
 
 
 body{
-    background-color: var(--primary-clr-800)
+    background-color: var(--primary-clr-800);
 }
 canvas{
     border: #c71e0f 1px solid;
