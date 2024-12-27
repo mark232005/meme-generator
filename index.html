@@ -16,7 +16,7 @@
             <ul class="clean-list flex ">
                 <li class=" btn-gallery flex" onclick="onOpenGallery()"><button>Gallery</button></li>
                 <li class="flex"><button>Saved</button></li>
-                <li class="flex"><button>Randomize</button></li>
+                <li class="flex"><button onclick="onRandomize()">Randomize</button></li>
             </ul>
         </nav>
         <button onclick="toggleMenu()" class="hamburger" type="button">☰</button>
@@ -85,6 +85,8 @@
             </div>
         </section>
     </main>
+    <script src="js/utils.js"></script>
+
     <script src="js/service/memeService.js"></script>
 
     <script src="js/controller/memeController.js"></script>

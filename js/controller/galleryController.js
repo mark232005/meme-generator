@@ -14,5 +14,11 @@ function toggleMenu() {
 
 }
 
+ function onRandomize(){
+    var id=getRandomInt(1,18)
+    onImgSelect(id)
+    showSection('.editor')
+
+ }
 
 
