@@ -16,6 +16,7 @@
 @import url('/styles/componets/logo.css');
 @import url('/styles/componets/canvas-editor.css');
 @import url('/styles/componets/main-screen.css');
+@import url('/styles/componets/saved.css');
 
 /*MQ*/
 @import url('/styles/setup/mq.css');

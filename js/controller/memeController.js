@@ -3,6 +3,8 @@ let gElCanvas
 let gCtx
 let gStartPos
 const TOUCH_EVS = ['touchstart', 'touchmove', 'touchend']
+const IMG_KEY = 'img'
+
 
 
 function onInit() {
@@ -150,4 +152,9 @@ function onDeleteLine() {
 function openColorPicker(inputId) {
   document.getElementById(inputId).click()
 }
+function onSaveImg() {
+  saveImg()
+}
+
+
 

@@ -14,11 +14,27 @@ function toggleMenu() {
 
 }
 
- function onRandomize(){
-    var id=getRandomInt(1,18)
+function onRandomize() {
+    var id = getRandomInt(1, 18)
     onImgSelect(id)
     showSection('.editor')
 
- }
+}
+
+function onOpenSaved() {
+    showMemeSaved()
+    showSection('.saved-page')
+
+}
+
+function onShare(){
+    
+}
+
+
+
+
+
+
 
 

@@ -60,6 +60,9 @@
     background-color: #e8e8e8;
     
 }
+.frame-color img{
+    width: 80%;
+}
 .plus-size-txt{
     grid-area: 1/1/2/2;
 

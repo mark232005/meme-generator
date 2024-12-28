@@ -1,4 +1,6 @@
 'use strict'
+var gMemeSave=[]
+
 var gImgs = [
     { id: 1, url: 'img/1.jpg', keywords: ['funny', 'cat'] },
     { id: 2, url: 'img/2.jpg', keywords: ['funny', 'cat'] },
@@ -37,7 +39,6 @@ var gMeme = {
     ]
 }
 
-var gKeywordSearchCountMap = { 'funny': 12, 'cat': 16, 'baby': 2 }
 
 
 
@@ -97,6 +98,7 @@ function setLineColor() {
 function showSection(sectionToShow) {
     document.querySelector('.section-gallery').style.display = 'none'
     document.querySelector('.editor').style.display = 'none'
+    document.querySelector('.saved-page').style.display = 'none'
     document.querySelector(sectionToShow).style.display = 'grid'
 }
 function download() {
@@ -188,3 +190,20 @@ function deleteLine() {
     }
 
 }
+
+
+function saveImg() {
+    const meme = getMemeData() 
+    gMemeSave.push(meme)
+    saveToStorage(IMG_KEY, gMemeSave)
+}
+function getMemeData() {
+    return {
+        selectedImgId: gMeme.selectedImgId, 
+        lines: JSON.parse(JSON.stringify(gMeme.lines)),
+        selectedLineId: gMeme.selectedLineId 
+    }
+}
+
+
+
