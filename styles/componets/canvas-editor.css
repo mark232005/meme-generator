@@ -16,6 +16,13 @@
     justify-content: center;
     align-items: center;
 }
+.btn-line-action button:hover{
+    background-color: rgb(122, 129, 134);
+}
+.edit-line button:hover{
+    background-color: rgb(122, 129, 134);
+
+}
 .edit-line{
     display: grid;
     grid-template-rows: 1fr 1fr;
@@ -115,6 +122,11 @@
     align-items: center;
     justify-content: center;
 }
+.btn-img-action button:hover{
+    background-color: rgb(122, 129, 134);
+
+}
+
 .btn-facebook{
     border-radius:30% ;
     width: 60px;
