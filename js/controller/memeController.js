@@ -157,4 +157,19 @@ function onSaveImg() {
 }
 
 
+function onUploadImg(ev) {
+  ev.preventDefault()
+  
+  const canvasData = gElCanvas.toDataURL('image/jpeg');
+  function onSuccess(uploadedImgUrl) {
+    const encodedUploadedImgUrl = encodeURIComponent(uploadedImgUrl);
+    console.log('encodedUploadedImgUrl:', encodedUploadedImgUrl);
+    
+    const shareButton = document.querySelector('.btn-facebook');
+    
+    shareButton.setAttribute("onclick", `window.open('https://www.facebook.com/sharer/sharer.php?u=${encodedUploadedImgUrl}&t=${encodedUploadedImgUrl}')`);
+    
+  }
+  uploadImg(canvasData, onSuccess);
 
+}

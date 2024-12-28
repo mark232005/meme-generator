@@ -115,3 +115,9 @@
     align-items: center;
     justify-content: center;
 }
+.btn-facebook{
+    border-radius:30% ;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(24, 119, 242);
+}

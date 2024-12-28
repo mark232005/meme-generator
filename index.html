@@ -80,7 +80,14 @@
                 <div class="btn-img-action flex">
                     <button class="btn-download" onclick="onDownload()"> <img src="icons/download.svg">Download</button>
                     <button class="btn-save" onclick="onSaveImg()"> <img src="icons/save-solid.svg">Save</button>
-                    <button class="btn-facebook" onclick="onShare()">Share</button>
+                    <form action="" method="POST" enctype="multipart/form-data" onsubmit="onUploadImg(event)">
+                        <input name="img" id="imgData" type="hidden" />
+                        <button class="btn-facebook" type="button" onclick="onUploadImg(event)"><img src="icons/facebook-brands-solid.svg"></button>
+                      </form>
+                      <div class="share-container">
+
+                      </div>
+                  
                 </div>
 
             </div>
@@ -96,6 +103,7 @@
     <script src="js/storage.service.js"></script>
 
     <script src="js/service/memeService.js"></script>
+    <script src="js/service/upload.service.js"></script>
 
     <script src="js/controller/memeController.js"></script>
     <script src="js/controller/galleryController.js"></script>
