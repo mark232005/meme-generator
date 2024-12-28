@@ -17,6 +17,7 @@
 @import url('/styles/componets/canvas-editor.css');
 @import url('/styles/componets/main-screen.css');
 @import url('/styles/componets/saved.css');
+@import url('/styles/componets/modal-msg.css');
 
 /*MQ*/
 @import url('/styles/setup/mq.css');

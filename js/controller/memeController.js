@@ -36,6 +36,7 @@ function onSetLineTxt() {
 }
 function onDownload() {
   download()
+  showMsg('download')
 }
 function onSetLineColor() {
   setLineColor()
@@ -52,6 +53,8 @@ function onChangeSize(value) {
 function onAddLine() {
   addLine()
   renderMeme()
+  showMsg('add line')
+
 }
 
 function onSwitchLine() {
@@ -147,13 +150,16 @@ function onSetFont() {
 function onDeleteLine() {
   deleteLine()
   renderMeme()
+  showMsg('delete line')
 }
 
 function openColorPicker(inputId) {
   document.getElementById(inputId).click()
 }
 function onSaveImg() {
+
   saveImg()
+  showMsg('save')
 }
 
 
