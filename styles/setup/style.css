@@ -2,22 +2,22 @@
 
 
 /*SETUP*/
-@import url('styles/setup/typography.css');
-@import url('styles/setup/vars.css');
+@import url('/styles/setup/typography.css');
+@import url('/styles/setup/vars.css');
 
 /*BASICS*/
-@import url('styles/basics/base.css');
-@import url('styles/basics/helpers.css');
-@import url('styles/basics/layout.css');
+@import url('/styles/basics/base.css');
+@import url('/styles/basics/helpers.css');
+@import url('/styles/basics/layout.css');
 
 /*COMPONETS*/
-@import url('styles/componets/main-header.css');
-@import url('styles/componets/section-gallery.css');
-@import url('styles/componets/logo.css');
-@import url('styles/componets/canvas-editor.css');
-@import url('styles/componets/main-screen.css');
-@import url('styles/componets/saved.css');
-@import url('styles/componets/modal-msg.css');
+@import url('/styles/componets/main-header.css');
+@import url('/styles/componets/section-gallery.css');
+@import url('/styles/componets/logo.css');
+@import url('/styles/componets/canvas-editor.css');
+@import url('/styles/componets/main-screen.css');
+@import url('/styles/componets/saved.css');
+@import url('/styles/componets/modal-msg.css');
 
 /*MQ*/
-@import url('styles/setup/mq.css');
+@import url('/styles/setup/mq.css');
